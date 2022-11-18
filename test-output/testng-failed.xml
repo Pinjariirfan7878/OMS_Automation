@@ -3,11 +3,17 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="oms.TestCases.TC_005_Interbranch">
+      <class name="oms.TestCases.TC_002_CreatePurchaseOrderTest">
         <methods>
-          <include name="interbranch"/>
+          <include name="purchase_order"/>
+          <include name="close"/>
+          <include name="disconnectToDB"/>
+          <include name="login"/>
+          <include name="logout"/>
+          <include name="connectToDB"/>
+          <include name="launchBrowser"/>
         </methods>
-      </class> <!-- oms.TestCases.TC_005_Interbranch -->
+      </class> <!-- oms.TestCases.TC_002_CreatePurchaseOrderTest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

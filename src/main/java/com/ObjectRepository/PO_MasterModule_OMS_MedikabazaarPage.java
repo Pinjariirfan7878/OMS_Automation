@@ -6,9 +6,9 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
 public class PO_MasterModule_OMS_MedikabazaarPage {
-	
+
 	@FindBy(xpath="//select[@id=\"verification_status\"]") private WebElement verification_status_dd;
-	@FindBy(xpath="//input[@name=\"comment\"]") private WebElement comment_dd;
+	@FindBy(xpath="//input[@name=\"comment\"]") private WebElement comment_textfield;
 	@FindBy(xpath="//button[text()='Submit']") private WebElement sumbit_button;
 	@FindBy(xpath="//button[text()='PO Status And Comment']") private WebElement PO_status_and_comment_bucket;
 	@FindBy(xpath="//td[text()='Approved By Finance']") private WebElement finance_approve_text;
@@ -21,8 +21,22 @@ public class PO_MasterModule_OMS_MedikabazaarPage {
 	@FindBy(xpath="//input[@id=\"full\"]") private WebElement select_all_checkbox;
 	@FindBy(xpath="//button[text()='PO Inward History']") private WebElement PO_inward_history_bucket;
 	@FindBy(xpath="//button[text()='Accepted Order']") private WebElement accepet_order_text;
+	@FindBy(xpath="//td[text()='Approved By PO Supervisor']") private WebElement procure_approved_text;
+    @FindBy(xpath="//table[@id=\"DataTables_Table_0\"]//td[contains(text(),'PO')]") private WebElement PO_number;
+    @FindBy(xpath="//table[@id=\"DataTables_Table_0\"]//a[contains(text(),'GRN')]") private WebElement GRN_number;
+	
+    
+    public WebElement getPO_number() {
+		return PO_number;
+	}
 
+	public WebElement getGRN_number() {
+		return GRN_number;
+	}
 
+	public WebElement getProcure_approved_text() {
+		return procure_approved_text;
+	}
 
 	public PO_MasterModule_OMS_MedikabazaarPage(WebDriver driver)
 	{
@@ -32,8 +46,8 @@ public class PO_MasterModule_OMS_MedikabazaarPage {
 	public WebElement getVerification_status_dd() {
 		return verification_status_dd;
 	}
-	public WebElement getComment_dd() {
-		return comment_dd;
+	public WebElement getComment_textfield() {
+		return comment_textfield;
 	}
 	public WebElement getSumbit_button() {
 		return sumbit_button;

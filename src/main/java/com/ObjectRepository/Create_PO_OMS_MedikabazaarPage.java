@@ -6,7 +6,7 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
 public class Create_PO_OMS_MedikabazaarPage {
-	
+
 	@FindBy(xpath="//input[@type=\"email\"]") private WebElement supplier_email_textfield;
 	@FindBy(xpath="//button[text()='Submit']") private WebElement submit_button;
 	@FindBy(xpath="//select[@id=\"payment_terms\"]") private WebElement payment_terms_DD;
@@ -16,6 +16,19 @@ public class Create_PO_OMS_MedikabazaarPage {
 	@FindBy(xpath="//input[@class=\"form-control text-center numbers hsn_class\"]") private WebElement HSN_Code_textfield;
 	@FindBy(xpath="//input[@name=\"updateitemlist[]\"]") private WebElement firstIteam_check_box;
 	@FindBy(xpath="//button[@id=\"btnplaneorder\"]") private WebElement create_purchase_order_button;
+	@FindBy(xpath="//button[text()='Update Cart']") private WebElement update_cart_button;
+	@FindBy(xpath="//input[@name=\"shipping_price\"]") private WebElement shipping_charge_textfield;
+	@FindBy(xpath="//button[text()='UPDATE']") private WebElement shipping_update_button;
+	
+	
+	public WebElement getShipping_update_button() {
+		return shipping_update_button;
+	}
+
+
+	public WebElement getShipping_charge_textfield() {
+		return shipping_charge_textfield;
+	}
 
 
 	public Create_PO_OMS_MedikabazaarPage(WebDriver driver)
@@ -31,6 +44,11 @@ public class Create_PO_OMS_MedikabazaarPage {
 
 	public WebElement getSubmit_button() {
 		return submit_button;
+	}
+
+
+	public WebElement getUpdate_cart_button() {
+		return update_cart_button;
 	}
 
 
@@ -70,6 +88,6 @@ public class Create_PO_OMS_MedikabazaarPage {
 
 
 
-	
+
 
 }
